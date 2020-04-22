@@ -1,4 +1,4 @@
-module Sort where
+module Quicksort where
 
 import qualified Language.Haskell.Liquid.Bag as B
 
