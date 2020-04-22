@@ -24,7 +24,6 @@ sort l@(x:xs) =
   combine x (sort lts) (sort gts)
 
 {-@ partition :: p:a -> xs:[a] -> {v:([{x:a | x < p}], [{x:a | x >= p}]) | listElts xs = B.union (listElts (fst v)) (listElts (snd v)) && len xs == len (fst v) + len (snd v)} @-}
-(x::Int, {v:Int | x <= v})
 partition p [] = ([], [])
 partition p (x:xs) =
   let (lts, gts) = partition p xs in
