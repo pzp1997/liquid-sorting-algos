@@ -19,7 +19,7 @@ snd (_, y) = y
 
 {-@ sort :: xs:[a] -> {v:IncrList a | listElts xs = listElts v} @-}
 sort [] = []
-sort l@(x:xs) =
+sort (x:xs) =
   let (lts, gts) = partition x xs in
   combine x (sort lts) (sort gts)
 
